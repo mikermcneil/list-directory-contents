@@ -1,0 +1,25 @@
+{
+  "name": "list-directory-contents",
+  "version": "0.0.0",
+  "description": "Get the contents of a directory recursively (like ls -R)",
+  "keywords": [],
+  "dependencies": {
+    "walker": "^1.0.6"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "debug": "node debug app.js",
+    "test": "mocha"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikermcneil/list-directory-contents.git"
+  },
+  "author": "mikermcneil",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^1.20.1",
+    "fs-extra": "^0.10.0"
+  }
+}
