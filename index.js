@@ -18,10 +18,14 @@ module.exports = function ls (dir, cb) {
   var spinlock;
   var results = [];
 
-  walker(dir).on('entry', function (entry, stat) {
-    console.log('!', 'entry:',entry, 'stat:',stat);
+  walker(dir)
+  .on('entry', function (entry, stat) {
+    // Don't include top-level directory (`dir`) in result `tree`
+    if (entry===dir) return;
+
+    results.push(entry);
   })
-  .on('error', function (){
+  .on('error', function (err){
     if (spinlock) return;
     spinlock = true;
     return cb(err);
