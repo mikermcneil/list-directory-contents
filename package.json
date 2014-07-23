@@ -1,8 +1,18 @@
 {
   "name": "list-directory-contents",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Get the contents of a directory recursively (like ls -R)",
-  "keywords": ["ls", "ls -r", "recursive ls", "fs", "dir", "lstat", "recursive stat", "lstat", "list files"],
+  "keywords": [
+    "ls",
+    "ls -r",
+    "recursive ls",
+    "fs",
+    "dir",
+    "lstat",
+    "recursive stat",
+    "lstat",
+    "list files"
+  ],
   "dependencies": {
     "walker": "~1.0.6"
   },
