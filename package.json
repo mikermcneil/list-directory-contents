@@ -2,7 +2,7 @@
   "name": "list-directory-contents",
   "version": "0.0.1",
   "description": "Get the contents of a directory recursively (like ls -R)",
-  "keywords": [],
+  "keywords": ["ls", "ls -r", "dir", "list files", "directory", "recursive ls"],
   "dependencies": {
     "walker": "~1.0.6"
   },
