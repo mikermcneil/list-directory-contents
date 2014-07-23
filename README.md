@@ -5,7 +5,7 @@ Implements `ls -R` for Node.js.
 ## Installation
 
 ```sh
-$ npm install merge-defaults
+$ npm install list-directory-contents
 ```
 
 ## Usage
