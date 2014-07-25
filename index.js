@@ -19,10 +19,19 @@ module.exports = function ls (dir, cb) {
   var results = [];
 
   walker(dir)
-  .on('entry', function (entry, stat) {
+  .on('dir', function (entry, stat) {
     // Don't include top-level directory (`dir`) in result `tree`
     if (entry===dir) return;
 
+    // End users should be able to do:
+    // somepath.match(/^[^.]
+    entry = entry.replace(/\/*$/, '/');
+
+    results.push(entry);
+  })
+  .on('file', function (entry, stat) {
+    // Don't include top-level directory (`dir`) in result `tree`
+    if (entry===dir) return;
     results.push(entry);
   })
   .on('error', function (err){
